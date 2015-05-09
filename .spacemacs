@@ -134,6 +134,8 @@ before layers configuration."
    dotspacemacs-default-package-repository nil
    )
   ;; User initialization goes here
+  ; Git
+  (setq-default git-magit-status-fullscreen t)
   )
 
 (defun dotspacemacs/config ()
