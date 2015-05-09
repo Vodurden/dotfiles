@@ -142,6 +142,23 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
+  (setq user-full-name "Jake Woods")
+  (setq user-mail-address "vodurden@gmail.com")
+
+  ;; UTF8!
+  (set-language-environment 'utf-8)
+  (set-terminal-coding-system 'utf-8)
+  (setq locale-coding-system 'utf-8)
+  (set-default-coding-systems 'utf-8)
+  (set-selection-coding-system 'utf-8)
+  (prefer-coding-system 'utf-8)
+
+  ;; Remove trailing whitespace before saving a file
+  (add-hook 'before-save-hook 'whitespace-cleanup)
+  (add-hook 'before-save-hook (lambda() (delete-trailing-whitespace)))
+
+  ;; Force native indexing so .gitignore is respected
+  (setq projectile-indexing-method 'native)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
