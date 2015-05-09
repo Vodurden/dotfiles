@@ -24,7 +24,10 @@ In an elevated terminal:
      pacman -Su
      pacman -S git
      git clone <dotfilerepo> ~/.dotfiles
-     ~/.dotfiles/bootstrap_msys.sh
+     cd ~/.dotfiles
+     ./bootstrap_msys.sh
+     git config core.autocrlf false
+     git config commit.template .git-commit-template.txt
      ** RESTART MSYS2 AS NORMAL USER **
 
 ## Important Commands
